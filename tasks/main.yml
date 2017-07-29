@@ -1,0 +1,6 @@
+---
+- name: Generate system locales
+  locale_gen:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ locales_list }}"
